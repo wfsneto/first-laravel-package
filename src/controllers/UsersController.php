@@ -1,10 +1,11 @@
 <?php
 namespace Wfsneto\FirstLaravelPackage;
 
-class UsersController extends \BaseController
+class UsersController extends BaseController
 {
     public function index()
     {
-        return 'Uia!';
+        $users = User::all();
+        return \View::make('first-laravel-package::users.index')->with('users', $users);
     }
 }
