@@ -2,6 +2,6 @@
     {{ trans('User not found') }}!
 @else
     @foreach($users as $key => $user)
-        {{ $user }} <hr />
+        <pre><?php print_r($user->getAttributes()) ?></pre> <hr />
     @endforeach
 @endif
